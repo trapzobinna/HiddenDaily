@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.flex{
+    display:flex;
+    border: 2px solid #dc143c;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+p{
+width: max-content;
+}
+    
+
+.one{
+    border: 1px solid red;
+align-self: flex-start;
+}
+.two{
+    border: 1px solid blue;
+
+}
+.three{
+    border: 1px solid purple;
+
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
