@@ -1,35 +1,40 @@
-﻿html,
-body {
-	height: 100%;
-	font-family: 'Roboto', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	background-image: url();
-	background-attachment: fixed;
-	backface-visibility: no-repeat;
-	background-size: cover;
-	background-position: top center;
-}
-	.site-btn {
-		display: inline-block;
-		text-align: center;
-		font-size: 15px;
-		color: blue;
-		padding: 16px 30px;
-		min-width: 153px;
-		border-radius: 50px;
-		font-weight: 500;
-		border: none;
-		background: black;
-		cursor: pointer;
-	}
-	
-	.site-btn.btn-sm {
-	
-			padding: 11px 30px;
-			min-width: 145px;
-	}
+﻿/* Reset styles and default styles */
 
+html,
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    background-image: url();
+    background-attachment: fixed;
+    backface-visibility: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+/* Button styles */
+
+.site-btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    color: blue;
+    padding: 16px 30px;
+    min-width: 153px;
+    border-radius: 50px;
+    font-weight: 500;
+    border: none;
+    background: black;
+    cursor: pointer;
+}
+
+.site-btn.btn-sm {
+    padding: 11px 30px;
+    min-width: 145px;
+}
+
+/* Heading styles */
 
 h1,
 h2,
@@ -37,203 +42,322 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-	font-weight: 500;
-	color: #131313;
+    margin: 0;
+    font-weight: 500;
+    color: #131313;
 }
 
 h1 {
-	font-size: 16px;
-        text-align: center;
+    font-size: 16px;
+    text-align: center;
 }
 
 h2 {
-	font-size: 36px;
+    font-size: 36px;
 }
 
 h3 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 h4 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 h5 {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 h6 {
-	font-size: 16px;
+    font-size: 16px;
 }
+
+/* Paragraph styles */
 
 p {
-	font-size: 14px;
-	color: #878787;
-	line-height: 2;
+    font-size: 14px;
+    color: #878787;
+    line-height: 2;
 }
 
+/* Image styles */
+
 img {
-	max-width: 200%;
+    max-width: 200%;
 }
-span{
-font-size: 12px;
-font-family: inherit;
-align: center;
+
+/* Span styles */
+
+span {
+    font-size: 12px;
+    font-family: inherit;
+    align: center;
 }
+
+/* Input, Select, Button, Textarea styles */
 
 input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-	outline: none;
+    outline: none;
 }
 
 a:hover,
 a:focus {
-	text-decoration: none;
-	outline: none;
+    text-decoration: none;
+    outline: none;
 }
+
+/* List styles */
 
 ul,
 ol {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
-/*------------------
-  Header section
----------------------*/
+
+/* Header section styles */
 
 .header-section {
-	background: #F5F3F3;
-	clear: both;
-	overflow: hidden;
-	padding: 30px 0;
-	border-bottom: 1px solid #F5F3F3;
-}
-.header-section1 {
-	background: white;
-	clear: both;
-	overflow: hidden;
-	padding: 10px 0;
-	border-top: 1px solid #e5e5e5;
+    background: #f5f3f3;
+    clear: both;
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px solid #F5F3F3;
 }
 
-.site-logo {
-	display: inline-block;
-	float: left;
-	padding-top: 6px;
+.header-section1 {
+    background: white;
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Sidebar styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .user-panel {
-	float: right;
-	font-weight: 500;
-	background: black;
-	padding: 8px 28px;
-	border-radius: 30px;
+    background-color: #003366;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.user-panel a {
-	font-size: 14px;
-	color: white;
+.sidebar-icon-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
-.user-panel a:hover {
-  color: blue;
+
+.right {
+    background: #f5f3f3;
+    width: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    transition: all 0.6s ease-in-out;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #e5e5e5;
 }
+
+.sidebar-icon {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.right.show-sidebar {
+    width: 10rem;
+}
+
+.right ul {
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+ul li {
+    align-items: center;
+    margin-bottom: 1rem;
+    font-family: helvetica;
+    list-style: none;
+    transition: all 0.6s linear;
+    text-decoration: none;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 0;
+    color: #003366;
+    border-bottom: none;
+}
+
+ul li a i {
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1.2rem;
+    transition: all 0.6s linear;
+}
+
+.item i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.right ul li:hover {
+    transform: translateX(-2rem);
+    transition: all 0.1s linear;
+}
+
+.right:hover {
+    background-color: #f5f3f3;
+}
+
+a:hover {
+    color: #003366;
+    font-size: 25px;
+}
+
+li:hover {
+    box-shadow: 5px 5px 5px black;
+    background-color: #336666;
+    color: white;
+}
+
+/* Main menu styles */
 
 .main-menu {
-  float: left;
-  font-weight: 1000;
-  background: white;
-  padding: 4px 18px;
-  border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.main-menu-container {
+    flex-grow: 1;
+}
+
 .main-menu a {
-	display: inline-block;
-	font-size: 16px;
-	color:black;
-	margin-left: 35px;
-	font-weight: 500;
-	padding: 8px 28px;
-	border-radius: 30px;
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    margin-right: 35px;
+    font-weight: 500;
+    padding: 8px 28px;
+    border-radius: 30px;
+    text-decoration: none;
 }
 
-.main-menu a:hover {
-  background-color: white;
-	color: black;
+/* Large devices (Laptops/Desktops) */
+@media only screen and (min-width: 1200px) {
+  /* Keep your existing styles for larger screens here */
 }
 
-.header-btn {
-	float: right;
-	margin-right: 0;
+/* Medium devices (Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .main-menu a {
+    font-size: 14px;
+    margin-right: 20px;
+    padding: 8px 15px;
+  }
+
+  .right ul {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+  }
 }
 
-.nav-switch {
-	display: none;
+/* Small devices (Large phones) */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+.right.show-sidebar {
+    width: 8rem;
 }
-.active {
-  background-color: blue;
-  color: white;
-}
-img {
-	width: 5%;
-	height: 42px;
-	float: left;
-	border: blue;
+  .main-menu a {
+    font-size: 12px;
+    margin-right: 15px;
+    padding: 8px 12px;
+  }
+
+  .right ul {
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+  }
 }
 
-footer{
-   background-color: black;
-   font-color: white;
-   height: 50px;
-   width: 100%;
-   text-align: left;
-   font-size: 2em;
+/* Small devices (Medium phones) */
+@media only screen and (min-width: 360px) and (max-width: 576px) {
+.right.show-sidebar {
+    width: 6rem;
 }
-/* Large Mobile :480px. */
+  .main-menu a {
+    font-size: 12px;
+    margin-right: 15px;
+    padding: 8px 12px;
+  }
 
-@media only screen and (max-width: 767px) {
-	.header-section {
-		overflow: visible;
-		padding: 23px 0;
-	}
-	.header-section .container {
-		position: relative;
-	}
-	.site-logo {
-		float: none;
-		padding-top: 0;
-	}
-	.main-menu {
-		display: none;
-		position: absolute;
-		top: calc(100% + 24px);
-		left: 0;
-		width: 100%;
-		background: #ffffff;
-		z-index: 999;
-	}
-	.main-menu ul li {
-		display: block;
-		border-bottom: 1px solid #ececec;
-	}
-	.main-menu ul li a {
-		margin-left: 0;
-		color: #131313;
-		padding: 13px 26px;
-	}
-	.nav-switch {
-		color: #fff;
-		display: block;
-		float: right;
-		cursor: pointer;
-		font-size: 25px;
-	}
-	.user-panel {
-		display: none;
-	}
-.box1{
-       width: 100%;
-       height: 200px;
-       background-color: blue;
+  .right ul {
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+  }
 }
+
+/* Extra small devices (Small phones) */
+@media only screen and (max-width: 576px) {
+  .main-menu a {
+    font-size: 10px;
+    margin-right: 10px;
+    padding: 8px 10px;
+  }
+
+  .right ul {
+    margin-top: 0.2rem;
+    margin-right: 0.1rem;
+  }
+}
+
+/* Custom media query for iPhone XS Max */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  /* Adjust styles for iPhone XS Max here */
+
+.right.show-sidebar {
+    width: 6rem;
+
+}
+
+/* Custom media query for Samsung J7 */
+@media only screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+  /* Adjust styles for Samsung J7 here */
+}
+
+/* Custom media query for iPhone 8 Plus */
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  /* Adjust styles for iPhone 8 Plus here */
+}
+
+/* Custom media query for Samsung M11 */
+@media only screen and (device-width: 720px) and (device-height: 1560px) and (-webkit-device-pixel-ratio: 2) {
+  /* Adjust styles for Samsung M11 here */
+}
+
+/* Custom media query for Samsung S7 */
+@media only screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  /* Adjust styles for Samsung S7 here */
+}
+
+
+/* End of CSS */

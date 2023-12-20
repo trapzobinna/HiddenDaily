@@ -1,46 +1,63 @@
 ﻿<!DOCTYPE html>
-<html>
-		<title>Main  |  CRTZ</title>
-
-	
-			
-<!-- Header section -->
-<link rel="shortcut icon" href="download.png" type="image/x-icon">
-	<header class="header-section1">
-
-<!-- logo -->
-			<a href="redo.html">
-			<img src="crtz.png" alt="picture1">
-			</a>
-<div class="user-panel">
-		<a href="Login.html">Login</a>  |  <a href="register.html">Join Us</a>
-		</div>
-		<!-- responsive -->
-		<div class="nav-switch">
-				<i class="fa fa-bars"></i>
-			</div>
-
-
-			<!-- site menu -->
-			<nav class="main-menu">
-						<a href="redo.html">Discover</a>
-						<a href="main.html">Gallery</a>
-						<a href="orders.html">Orders and Shipping</a>
-						<a href="contact.html">Contact</a>
-				</nav>
-			</div>
-
-	<link rel="stylesheet" type="text/css" href="gallery.css">
-	</header>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main | CRTZ</title>
+    <link rel="shortcut icon" href="download.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <script src="progress.js"></script>
+</head>
 <body>
-	<!-- Header section -->
-<link rel="shortcut icon" href="download.png" type="image/x-icon">
-	<header class="header-section">
 
-<div class="box1">
+<!-- Header section -->
+<header class="header-section">
+    <a href="redo.html"></a>
+    
+
+    
+    <div class="user-panel">
+        <div class="main-menu-container">
+            <nav class="main-menu">
+                <a href="main.html">Gallery</a>
+                <a href="orders.html">Archives</a>
+                <a href="contact.html">Music</a>
+            </nav>
+        </div>
+        <div class="sidebar-icon-container">
+            <img src="./sidebaricon.png" alt="Sidebar Icon" class="sidebar-icon" id="sidebar-icon">
+        </div>
+        <div class="right">
+            <i class="fa-solid fa-code" id="logo"></i>
+            <ul>
+                <li class="item"><a class="link" href="#"><i class="fa fa-Account"></i>Account</a></li>
+                <li class="item"><a class="link" href="#"><i class="fa fa-calendar"></i>Events</a></li>
+                <li class="item"><a class="link" href="#"><i class="fa fa-phone"></i>Contact</a></li>
+                <li class="item"><a class="link" href="#"><i class="fa fa-chart-line"></i>Records</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="box1"></div>
+
+<!-- Sidebar end -->
+</body>
+</html>
+
+<!-- <div id="secret-content" style="display: none;">
 </div>
 
-</body>
+<input type="password" id="passcode-input" placeholder="Enter Passcode">
+<button onclick="checkPasscode()">Submit</button>
 
-</html>
+<script>
+    function checkPasscode() {
+        var passcode = document.getElementById('passcode-input').value;
+        if (passcode === 'yourrandompasscode') {
+            document.getElementById('secret-content').style.display = 'block';
+        } else {
+            alert('Incorrect passcode');
+        }
+    }
+</script> -->
