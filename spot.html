@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Login Example</title>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+</head>
+
+<body>
+    <h1>Spotify Login Example</h1>
+    <div id="userInfo">
+        <h2 id="displayName"></h2>
+        <div id="avatar"></div>
+        <p><strong>ID:</strong> <span id="id"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>URI:</strong> <a id="uri" href="#"></a></p>
+        <p><strong>URL:</strong> <a id="url" href="#"></a></p>
+        <p><strong>Image URL:</strong> <span id="imgUrl"></span></p>
+    </div>
+
+    <script>
+        function base64URLEncode(str) {
+            return btoa(unescape(encodeURIComponent(str)))
+                .replace(/\+/g, '-')
+                .replace(/\//g, '_')
+                .replace(/=+$/, '');
+        }
+
+        function sha256(str) {
+            // returns promise that resolves to an ArrayBuffer
+            return crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+        }
+
+        function bufferToBase64UrlEncoded(buffer) {
+            var view = new Uint8Array(buffer);
+            var chars = [];
+
+            for (var i = 0; i < view.length; i++) {
+                chars.push(String.fromCharCode(view[i]));
+            }
+
+            return btoa(chars.join('')).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+        }
+
+        async function generateRandomString() {
+            var array = new Uint32Array(10);
+            crypto.getRandomValues(array);
+            return Array.from(array, dec => ('0' + dec.toString(16)).substr(-8)).join('');
+        }
+
+        async function createVerifierAndChallenge() {
+            const verifier = await generateRandomString();
+            const challenge = await sha256(verifier);
+            const base64Challenge = await bufferToBase64UrlEncoded(challenge);
+
+            localStorage.setItem("verifier", verifier);
+
+            return base64Challenge;
+        }
+
+        async function redirectToAuthCodeFlow(clientId) {
+            const redirectUri = encodeURIComponent("http://localhost:5173/callback");
+            const challenge = await createVerifierAndChallenge();
+            const state = await generateRandomString();
+
+            localStorage.setItem("state", state);
+
+            window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&scope=user-read-private%20user-read-email&state=${state}&code_challenge_method=S256&code_challenge=${challenge}`;
+        }
+
+        const clientId = "your_client_id";
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+
+        if (!code) {
+            redirectToAuthCodeFlow(clientId);
+        } else {
+            const accessToken = await getAccessToken(clientId, code);
+            const profile = await fetchProfile(accessToken);
+            populateUI(profile);
+        }
+
+        async function getAccessToken(clientId: string, code: string): Promise<string> {
+            const verifier = localStorage.getItem("verifier");
+
+            const params = new URLSearchParams();
+            params.append("client_id", clientId);
