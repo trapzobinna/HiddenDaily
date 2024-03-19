@@ -1,0 +1,192 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    background-color: hsl(0, 0%, 8%);
+}
+.container{
+    background-color: hsl(0, 0%, 12%);
+    border: 3px solid blue;
+    width: 380px;
+    height: 700px;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+}
+#pfp{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 140px;
+    border-radius: 50%;
+    border: 2px solid blue;
+
+}
+h1{
+color: white;
+position: absolute;
+left: 93px;
+top: 140px;
+}
+.location{
+    color: blue;
+    position: absolute;
+    left: 143px;
+    font-size: 15px;
+    font-weight: 900;
+    top: 200px;
+    text-decoration: none;
+}
+.about{
+    color: white;
+    position: absolute;
+    left: 50px;
+    top: 230px;
+}
+.githubcontainer{
+    background-color: hsl(0, 0%, 20%);
+    position: absolute;
+    top: 285px;
+    left: 30px;
+    height: 40px;
+    width: 320px;
+    border: 2px solid blue;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+
+}
+.github{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 125px;
+    font-weight: 900;
+    
+}
+.instagramcontainer{
+    background-color: hsl(0, 0%, 20%);
+    position: absolute;
+    top: 350px;
+    left: 30px;
+    height: 40px;
+    width: 320px;
+    border: 2px solid red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.insta{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 125px;
+    font-weight: 900;
+    
+}
+.pincontainer{
+    background-color: hsl(0, 0%, 20%);
+    position: absolute;
+    top: 415px;
+    left: 30px;
+    height: 40px;
+    width: 320px;
+    border: 2px solid greenyellow;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.pin{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 125px;
+    font-weight: 900;
+    
+}
+.xcontainer{
+    background-color: hsl(0, 0%, 20%);
+    position: absolute;
+    top: 480px;
+    left: 30px;
+    height: 40px;
+    width: 320px;
+    border: 2px solid purple;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.x{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 125px;
+    font-weight: 900;
+    
+}
+.spotifycontainer{
+    background-color: hsl(0, 0%, 20%);
+    position: absolute;
+    top: 545px;
+    left: 30px;
+    height: 40px;
+    width: 320px;
+    border: 2px solid orangered;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.spot{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 125px;
+    font-weight: 900;
+    
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+      width: 90%; /* Make the container take up most of the screen on medium devices */
+      left: 5%; /* Center the container */
+      top: 50px; /* Adjust as needed */
+    }
+
+    h1, .about, .location, .github, .insta, .pin, .x, .spot {
+      font-size: 12px; /* Slightly smaller text */
+    }
+
+    #pfp {
+      height: 80px; /* Smaller profile picture */
+width: 80px;
+      left: calc(50% - 40px); /* Center profile picture */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, .about, .location, .github, .insta, .pin, .x, .spot {
+      font-size: 10px; /* Even smaller text for small devices */
+    }
+
+    .githubcontainer, .instagramcontainer, .pincontainer, .xcontainer, .spotifycontainer {
+      width: calc(100% - 60px); /* Adjust container width */
+      left: 30px; /* Adjust left position to maintain centering */
+    }
+}

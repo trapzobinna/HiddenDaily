@@ -1,39 +1,108 @@
 ﻿<!DOCTYPE html>
-<html>
-		<title>track yo order  |  CRTZ</title>
+<html lang="en">
 
-	<!-- Header section -->
-<link rel="shortcut icon" href="download.png" type="image/x-icon">
-	<header class="header-section">
-		<div class="container">
-			<!-- logo -->
-			<a class="site-logo" href="redo.html"></a>
-			<img src="crtz.png" alt="picture1">
-			</a>
-<div class="user-panel">
-		<a target="_blank" href="Login.html">Login</a>  |  <a target="_blank" href="register.html">Join Us</a>
-		</div>
-		<!-- responsive -->
-		<div class="nav-switch">
-				<i class="fa fa-bars"></i>
-			</div>
-			<!-- site menu -->
-			<nav class="main-menu">
-						<a href="redo.html">Home</a>
-						<a href="main.html">Gallery</a>
-						<a href="orders.html">Orders and Shipping</a>
-                                                <a href="contact.html">Contact</a>
-
-						
-				</nav>
-			</div>
-
-
-	<link rel="stylesheet" type="text/css" href="redo.css">
-	</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives | Me</title>
+    <link rel="shortcut icon" href="download.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+    <script src="progress.js"></script>
+</head>
 
 <body>
-</div>
+    <script>
+        // Function to generate a random passcode
+        function generateRandomPasscode() {
+            // Generate a 9-character alphanumeric passcode
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let passcode = '';
+            for (let i = 0; i < 9; i++) {
+                passcode += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return passcode;
+        }
+
+        // Display a welcome message with the generated passcode
+        var generatedPasscode = generateRandomPasscode();
+        var welcomeMessage = "Welcome to the Archives! The code is: " + generatedPasscode;
+        alert(welcomeMessage);
+
+        // Function to check the entered passcode
+        function checkPasscode() {
+            var enteredPasscode = document.getElementById('passcode-input').value;
+
+            if (enteredPasscode === generatedPasscode) {
+                // Redirect to the actual website
+                window.location.href = "./Login.html"; // Replace with your actual website URL
+            } else {
+                alert('Incorrect passcode');
+            }
+        }
+    </script>
+
+    <div id="container">
+        <label for="passcode-input">Enter Passcode:</label>
+        <input type="text" id="passcode-input" placeholder="Enter Passcode">
+        <button onclick="checkPasscode()">Submit</button>
+
+        <div id="secret-content">
+            <!-- Your secret content goes here -->
+            <p>Welcome to the secret content!</p>
+        </div>
+    </div>
+
+    <style>
+    
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./ASHLUXE-PARADISE-INYONI-LOCATION0082_1296x.webp');
+        background-size: cover;
+        filter: blur(8px);
+        z-index: -1;
+    }
+
+    #container {
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px; /* Adjust the width as needed */
+        height: 300px; /* Set the height equal to the width to make it a square */
+        position: relative;
+        z-index: 1; /* Place above the background layer */
+    }
+
+    label,
+    input,
+    button {
+        height: 30px;
+        margin: 5px;
+    } 
+
+    #secret-content {
+        color: white;
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+
+    </style>
 
 </body>
 
