@@ -5,22 +5,20 @@ body{
 }
 .container{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Change to column for better mobile display */
+    justify-content: start; /* Changed from 'space-between' to 'start' */
     align-items: center;
     background-color: hsl(0, 0%, 12%);
     border: 3px solid blue;
     width: 380px;
     height: 700px;
-    position: absolute;
-    top: 150px;
-    left: 500px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-
+    position: fixed; /* Changed from 'absolute' to 'fixed' */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the centering */
+    border-radius: 20px; /* Simplified border-radius */
 }
+
 #pfp{
     height: 100px;
     width: 100px;
