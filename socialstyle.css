@@ -4,6 +4,9 @@ body{
     background-color: hsl(0, 0%, 8%);
 }
 .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: hsl(0, 0%, 12%);
     border: 3px solid blue;
     width: 380px;
@@ -31,7 +34,7 @@ body{
 h1{
 color: white;
 position: absolute;
-left: 93px;
+left: 153px;
 top: 140px;
 }
 .location{
@@ -51,17 +54,37 @@ top: 140px;
 }
 .githubcontainer{
     background-color: hsl(0, 0%, 20%);
+    /* background-color: white; */
     position: absolute;
     top: 285px;
     left: 30px;
-    height: 40px;
+    height: 70px;
     width: 320px;
     border: 2px solid blue;
-    border-top-left-radius: 10px;
+    /* border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    
+ */
+}
+.githubcontainer:hover .gitimage{
+    transform: translate(0, -6px);
+}
+.gitimage{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: -20px;
+    top: 7.5px;
+}
+.arrowimage{
+    /* border: 2px solid red; */
+    height:15px;
+    width: 15px;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 290px;
+    top: 25px;
 
 }
 .github{
@@ -69,123 +92,203 @@ top: 140px;
     text-decoration: none;
     position: absolute;
     top: 10px;
-    left: 125px;
-    font-weight: 900;
+    left:50px;
+    font-size: 16px;
+    
+}
+.link1{
+    color: gray;
+    text-decoration: none;
+    position: absolute;
+    top: 35px;
+    left:50px;
+    font-size: 15px;
     
 }
 .instagramcontainer{
     background-color: hsl(0, 0%, 20%);
+    /* background-color: white; */
     position: absolute;
-    top: 350px;
+    top: 375px;
     left: 30px;
-    height: 40px;
+    height: 70px;
     width: 320px;
-    border: 2px solid red;
-    border-top-left-radius: 10px;
+    border: 2px solid purple;
+    /* border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+ */
+}
+.instagramcontainer:hover .instaimage{
+    transform: translate(0, -6px);
+}
+.instaimage{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: -20px;
+    top: 7.5px;
+}
+.arrowimageforinsta{
+    /* border: 2px solid red; */
+    height:15px;
+    width: 15px;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 290px;
+    top: 25px;
+
 }
 .insta{
     color: white;
     text-decoration: none;
     position: absolute;
     top: 10px;
-    left: 125px;
-    font-weight: 900;
+    left:50px;
+    font-size: 16px;
     
 }
-.pincontainer{
-    background-color: hsl(0, 0%, 20%);
-    position: absolute;
-    top: 415px;
-    left: 30px;
-    height: 40px;
-    width: 320px;
-    border: 2px solid greenyellow;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-.pin{
-    color: white;
+.link2{
+    color: gray;
     text-decoration: none;
     position: absolute;
-    top: 10px;
-    left: 125px;
-    font-weight: 900;
+    top: 35px;
+    left:50px;
+    font-size: 15px;
     
 }
+
 .xcontainer{
     background-color: hsl(0, 0%, 20%);
+    /* background-color: white; */
     position: absolute;
-    top: 480px;
+    top: 465px;
     left: 30px;
-    height: 40px;
+    height: 70px;
     width: 320px;
-    border: 2px solid purple;
-    border-top-left-radius: 10px;
+    border: 2px solid red;
+    /* border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+ */
+}
+.xcontainer:hover .twitimage{
+    transform: translate(0, -6px);
+}
+.twitimage{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: -20px;
+    top: 7.5px;
+}
+.arrowimageforx{
+    /* border: 2px solid red; */
+    height:15px;
+    width: 15px;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 290px;
+    top: 25px;
+
 }
 .x{
     color: white;
     text-decoration: none;
     position: absolute;
     top: 10px;
-    left: 125px;
-    font-weight: 900;
+    left:50px;
+    font-size: 16px;
     
 }
-.spotifycontainer{
-    background-color: hsl(0, 0%, 20%);
+.link3{
+    color: gray;
+    text-decoration: none;
     position: absolute;
-    top: 545px;
+    top: 35px;
+    left:50px;
+    font-size: 15px;
+    
+}
+.spotcontainer{
+    background-color: hsl(0, 0%, 20%);
+    /* background-color: white; */
+    position: absolute;
+    top: 555px;
     left: 30px;
-    height: 40px;
+    height: 70px;
     width: 320px;
-    border: 2px solid orangered;
-    border-top-left-radius: 10px;
+    border: 2px solid green;
+    /* border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+ */
+}
+.spotcontainer:hover .spotimage{
+    transform: translate(0, -6px);
+}
+.spotimage{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: -20px;
+    top: 7.5px;
+}
+.arrowimageforspot{
+    /* border: 2px solid red; */
+    height:15px;
+    width: 15px;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 290px;
+    top: 25px;
+
 }
 .spot{
     color: white;
     text-decoration: none;
     position: absolute;
     top: 10px;
-    left: 125px;
-    font-weight: 900;
+    left:50px;
+    font-size: 16px;
     
 }
+.link4{
+    color: gray;
+    text-decoration: none;
+    position: absolute;
+    top: 35px;
+    left:50px;
+    font-size: 15px;
+    
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
-      width: 90%; /* Make the container take up most of the screen on medium devices */
-      left: 5%; /* Center the container */
-      top: 50px; /* Adjust as needed */
+        flex-direction: column;
+        
     }
+}
+    h1, .about, .location, .github, .insta, .x, .spot {
 
-    h1, .about, .location, .github, .insta, .pin, .x, .spot {
-      font-size: 12px; /* Slightly smaller text */
     }
 
     #pfp {
       height: 80px; /* Smaller profile picture */
-width: 80px;
+    width: 80px;
       left: calc(50% - 40px); /* Center profile picture */
     }
-}
+
 
 @media (max-width: 480px) {
-    h1, .about, .location, .github, .insta, .pin, .x, .spot {
-      font-size: 10px; /* Even smaller text for small devices */
+    h1, .about, .location, .github, .insta,.x, .spot {
     }
 
-    .githubcontainer, .instagramcontainer, .pincontainer, .xcontainer, .spotifycontainer {
+    .githubcontainer, .instagramcontainer, .xcontainer, .spotifycontainer {
       width: calc(100% - 60px); /* Adjust container width */
       left: 30px; /* Adjust left position to maintain centering */
     }
